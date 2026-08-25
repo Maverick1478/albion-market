@@ -11,7 +11,7 @@
     --gold:#d8b45a; --line:#2c3542;
     --green:#5bb85b; --amber:#c98a3d; --red:#d9605a;
     --caerleon:#b03030; --bridgewatch:#d98a3d; --lymhurst:#4a9d4a;
-    --martlock:#4a7dc4; --fortsterling:#c9cdd4; --thetford:#8a5cc4; --brecilien:#c44a9d;
+    --martlock:#4a7dc4; --fortsterling:#c9cdd4; --thetford:#8a5cc4; --brecilien:#c44a9d; --all:#d8b45a;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
@@ -31,7 +31,7 @@
   .meta b{color:var(--parch);font-weight:600}
 
   /* city selector */
-  .cities{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+  .cities{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
   .city-btn{display:flex;align-items:center;gap:8px;background:var(--iron-2);
     border:1px solid var(--line);color:var(--parch-dim);border-radius:22px;
     padding:8px 16px;font-family:inherit;font-size:14px;cursor:pointer;transition:.15s}
@@ -40,6 +40,32 @@
   .city-btn .dot{width:9px;height:9px;border-radius:50%}
   .city-btn .cnt{font-family:ui-monospace,monospace;font-size:11px;opacity:.7}
 
+  /* toolbar */
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;align-items:center}
+  .toolbar input[type=text], .toolbar select, .toolbar input[type=number]{
+    background:var(--iron-2);border:1px solid var(--line);color:var(--parch);
+    border-radius:8px;padding:7px 10px;font-family:inherit;font-size:13px;
+  }
+  .toolbar input[type=text]{min-width:160px;flex:1 1 160px}
+  .toolbar input[type=number]{width:78px}
+  .toolbar label{font-size:11px;color:var(--parch-dim);font-family:ui-monospace,monospace;
+    display:flex;align-items:center;gap:5px;white-space:nowrap}
+  .chip{background:var(--iron-2);border:1px solid var(--line);color:var(--parch-dim);
+    border-radius:22px;padding:7px 14px;font-family:inherit;font-size:13px;cursor:pointer;transition:.15s}
+  .chip:hover{border-color:var(--gold);color:var(--parch)}
+  .chip.active{background:var(--gold);color:#1a1408;font-weight:700;border-color:transparent}
+  .model-toggle{display:flex;gap:0;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+  .model-toggle button{background:var(--iron-2);border:none;color:var(--parch-dim);
+    padding:7px 14px;font-family:inherit;font-size:13px;cursor:pointer;transition:.15s}
+  .model-toggle button.active{background:var(--gold);color:#1a1408;font-weight:700}
+
+  /* banners */
+  .banner{background:var(--iron-2);border:1px solid var(--line);border-radius:10px;
+    padding:10px 16px;margin-bottom:12px;font-size:13px;color:var(--parch-dim);
+    font-family:ui-monospace,monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .banner b{color:var(--gold)}
+  .banner.offline{border-color:var(--amber);color:var(--amber)}
+
   /* legend */
   .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--parch-dim);
           margin-bottom:16px;font-family:ui-monospace,monospace}
@@ -47,10 +73,12 @@
   .l-fresh::before{color:var(--green)} .l-mid::before{color:var(--amber)}
 
   /* rows */
-  .row{display:grid;grid-template-columns:28px 92px 1fr auto;gap:14px;align-items:center;
+  .row{display:grid;grid-template-columns:24px 28px 92px 1fr auto;gap:14px;align-items:center;
        background:linear-gradient(180deg,var(--iron-2),var(--iron-3));
        border:1px solid var(--line);border-left:3px solid var(--gold);
-       border-radius:10px;padding:12px 16px;margin-bottom:10px}
+       border-radius:10px;padding:12px 16px;margin-bottom:10px;cursor:pointer}
+  .star{background:none;border:none;color:var(--parch-dim);font-size:18px;cursor:pointer;padding:0;line-height:1}
+  .star.on{color:var(--gold)}
   .rank{font-family:ui-monospace,monospace;font-size:18px;color:var(--gold);text-align:center;font-weight:700}
   .imgs{display:flex;align-items:center;gap:2px}
   .imgs img{width:42px;height:42px;background:var(--iron);border-radius:6px}
@@ -60,7 +88,10 @@
               margin-top:2px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
   .badge{background:rgba(91,184,91,.15);color:var(--green);border:1px solid rgba(91,184,91,.4);
          border-radius:10px;padding:1px 7px;font-size:10px}
+  .city-tag{border-radius:10px;padding:1px 7px;font-size:10px;color:#1a1408;font-weight:700}
   .fresh{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .trend{font-family:ui-monospace,monospace}
+  .trend.up{color:var(--green)} .trend.down{color:var(--red)} .trend.flat{color:var(--parch-dim)}
 
   .stats{display:flex;gap:18px;align-items:center;text-align:right}
   .stat .v{font-family:ui-monospace,monospace;font-variant-numeric:tabular-nums;font-size:15px;color:var(--parch)}
@@ -68,13 +99,21 @@
   .stat.roi .v{font-size:22px;color:var(--gold);font-weight:700}
   .stat.day .v{color:var(--green)}
 
+  .detail{grid-column:1/-1;margin-top:6px;padding-top:10px;border-top:1px dashed var(--line);
+    display:flex;flex-wrap:wrap;gap:16px;align-items:center;font-size:12px;color:var(--parch-dim);
+    font-family:ui-monospace,monospace}
+  .detail b{color:var(--parch)}
+  .copy-btn{background:var(--iron-3);border:1px solid var(--line);color:var(--parch);
+    border-radius:6px;padding:5px 10px;font-family:inherit;font-size:12px;cursor:pointer}
+  .copy-btn:hover{border-color:var(--gold)}
+
   .empty{text-align:center;color:var(--parch-dim);padding:50px 20px;font-family:ui-monospace,monospace;font-size:14px}
   footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);
          font-size:11px;color:var(--parch-dim);font-family:ui-monospace,monospace;line-height:1.7}
 
   @media(max-width:640px){
-    .row{grid-template-columns:24px 1fr;grid-template-areas:"rank info" "imgs stats"}
-    .rank{grid-area:rank} .imgs{grid-area:imgs} .info{grid-area:info} .stats{grid-area:stats;justify-content:flex-start;text-align:left;flex-wrap:wrap}
+    .row{grid-template-columns:20px 24px 1fr;grid-template-areas:"star rank info" ". imgs stats"}
+    .star{grid-area:star} .rank{grid-area:rank} .imgs{grid-area:imgs} .info{grid-area:info} .stats{grid-area:stats;justify-content:flex-start;text-align:left;flex-wrap:wrap}
     .stats{margin-top:4px}
   }
 </style>
@@ -87,14 +126,40 @@
     <div class="meta" id="meta">Chargement…</div>
   </header>
 
+  <div id="cacheBanner"></div>
+
   <div class="cities" id="cities"></div>
+
+  <div class="toolbar" id="toolbar">
+    <input type="text" id="q" placeholder="Rechercher un objet…">
+    <select id="fCategory"></select>
+    <select id="fTier">
+      <option value="">Tous tiers</option>
+      <option value="4">T4</option>
+      <option value="5">T5</option>
+    </select>
+    <select id="fSort">
+      <option value="roi">Trier : ROI</option>
+      <option value="profit_day">Trier : Silver/jour</option>
+      <option value="profit_unit">Trier : Profit/unité</option>
+      <option value="volume">Trier : Volume</option>
+    </select>
+    <div class="model-toggle" id="modelToggle">
+      <button data-model="primary">Mise en vente</button>
+      <button data-model="alt">Vente instantanée</button>
+    </div>
+    <button class="chip" id="favToggle">★ Favoris</button>
+    <label>ROI min <input type="number" id="fMinRoi" min="0" step="1" value="0">%</label>
+    <label>Silver/j min <input type="number" id="fMinDay" min="0" step="100" value="0"></label>
+  </div>
 
   <div class="legend">
     <span class="l-fresh">Donnée fraîche (&lt; 2 h)</span>
     <span class="l-mid">Donnée correcte</span>
-    <span>Trié par ROI · profit/jour = marge × ventes/jour</span>
+    <span>▲/▼ = évolution du ROI depuis le dernier scan · profit/jour = marge × ventes/jour</span>
   </div>
 
+  <div id="banner"></div>
   <div id="list"></div>
 
   <footer id="footer"></footer>
@@ -103,32 +168,101 @@
 <script>
 const CITY_COLORS = {
   "Caerleon":"var(--caerleon)","Bridgewatch":"var(--bridgewatch)","Lymhurst":"var(--lymhurst)",
-  "Martlock":"var(--martlock)","Fort Sterling":"var(--fortsterling)","Thetford":"var(--thetford)","Brecilien":"var(--brecilien)"
+  "Martlock":"var(--martlock)","Fort Sterling":"var(--fortsterling)","Thetford":"var(--thetford)","Brecilien":"var(--brecilien)",
+  "__ALL__":"var(--all)"
 };
 // icône de secours si l'image de l'objet ne charge pas
 const FALLBACK = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42'%3E%3Crect width='42' height='42' rx='6' fill='%231e2530'/%3E%3Ctext x='21' y='27' font-size='20' text-anchor='middle' fill='%23a9a08a'%3E%3F%3C/text%3E%3C/svg%3E";
+const TOP_DISPLAY = 10;
+const CACHE_KEY = "albion_cache_data";
+const FAV_KEY = "albion_favorites";
+const FILTERS_KEY = "albion_filters";
 
 const fmt = n => Math.round(n).toLocaleString("fr-FR");
 const img = id => `https://render.albiononline.com/v1/item/${id}.png?size=64`;
 const freshColor = h => h < 2 ? "var(--green)" : "var(--amber)";
 
 let DATA = null;
-let currentCity = null;
+let OFFLINE = false;
+let CACHE_SAVED_AT = null;
+const EXPANDED = new Set();
+let FAVORITES = new Set();
+let FILTERS = { category: "", tier: "", sort: "roi", model: "primary", favoritesOnly: false, minRoi: 0, minProfitDay: 0, city: null };
+let searchTerm = "";
+const BY_KEY = new Map(); // clé -> {opp, city} pour les actions (copier, etc.)
+
+function safeLocalGet(key, fallback){
+  try{ const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }catch{ return fallback; }
+}
+function safeLocalSet(key, val){
+  try{ localStorage.setItem(key, JSON.stringify(val)); }catch{ /* stockage indisponible : on continue sans persister */ }
+}
+
+function loadPrefs(){
+  FAVORITES = new Set(safeLocalGet(FAV_KEY, []));
+  FILTERS = Object.assign({}, FILTERS, safeLocalGet(FILTERS_KEY, {}));
+}
+function savePrefs(){
+  safeLocalSet(FAV_KEY, [...FAVORITES]);
+  safeLocalSet(FILTERS_KEY, FILTERS);
+}
+
+function oppKey(city, enchantedId){ return city + "::" + enchantedId; }
 
 async function load(){
+  loadPrefs();
   try{
-    const res = await fetch("data.json?v=" + Date.now());   // anti-cache
+    const res = await fetch("data.json?v=" + Date.now());
     if(!res.ok) throw new Error("HTTP " + res.status);
     DATA = await res.json();
+    OFFLINE = false;
+    safeLocalSet(CACHE_KEY, { data: DATA, savedAt: Date.now() });
   }catch(e){
-    document.getElementById("meta").textContent = "Impossible de charger data.json (" + e.message + ").";
-    document.getElementById("list").innerHTML = `<div class="empty">Les données ne sont pas encore disponibles.<br>Lance le workflow « Scan marché Albion » dans l'onglet Actions.</div>`;
-    return;
+    const cached = safeLocalGet(CACHE_KEY, null);
+    if(cached && cached.data){
+      DATA = cached.data;
+      OFFLINE = true;
+      CACHE_SAVED_AT = cached.savedAt;
+    } else {
+      document.getElementById("meta").textContent = "Impossible de charger data.json (" + e.message + ").";
+      document.getElementById("list").innerHTML = `<div class="empty">Les données ne sont pas encore disponibles.<br>Lance le workflow « Scan marché Albion » dans l'onglet Actions.</div>`;
+      return;
+    }
   }
+  if(FILTERS.city === null){
+    FILTERS.city = DATA.cities.some(c => (DATA.results[c]||[]).length) ? "__ALL__" : DATA.cities[0];
+  }
+  buildCategoryOptions();
+  applyFiltersToControls();
+  renderAll();
+  startAutoRefresh();
+}
+
+function buildCategoryOptions(){
+  const cats = new Set();
+  for(const city of DATA.cities) for(const o of (DATA.results[city]||[])) cats.add(o.category);
+  const sel = document.getElementById("fCategory");
+  sel.innerHTML = `<option value="">Toutes catégories</option>` +
+    [...cats].sort().map(c => `<option value="${c}">${c}</option>`).join("");
+  sel.value = FILTERS.category;
+}
+
+function applyFiltersToControls(){
+  document.getElementById("fCategory").value = FILTERS.category;
+  document.getElementById("fTier").value = FILTERS.tier;
+  document.getElementById("fSort").value = FILTERS.sort;
+  document.getElementById("fMinRoi").value = FILTERS.minRoi;
+  document.getElementById("fMinDay").value = FILTERS.minProfitDay;
+  document.getElementById("favToggle").classList.toggle("active", FILTERS.favoritesOnly);
+  document.querySelectorAll("#modelToggle button").forEach(b=>{
+    b.classList.toggle("active", b.dataset.model === FILTERS.model);
+  });
+}
+
+function renderAll(){
   renderMeta();
+  renderCacheBanner();
   renderCities();
-  // ville par défaut : la première qui a des résultats
-  currentCity = DATA.cities.find(c => (DATA.results[c]||[]).length) || DATA.cities[0];
   renderCity();
 }
 
@@ -138,41 +272,121 @@ function renderMeta(){
   const model = DATA.config.sale_model === "instant" ? "vente instantanée" : "mise en vente";
   document.getElementById("meta").innerHTML =
     `Mis à jour il y a <b>${ago} min</b> · serveur <b>${DATA.server.replace("https://","").split(".")[0]}</b> · `+
-    `taxe <b>${(DATA.config.sales_tax*100)}%</b> · modèle <b>${model}</b>`;
+    `taxe <b>${(DATA.config.sales_tax*100)}%</b> · modèle par défaut <b>${model}</b>`;
+}
+
+function renderCacheBanner(){
+  const box = document.getElementById("cacheBanner");
+  if(!OFFLINE){ box.innerHTML = ""; return; }
+  const ago = Math.round((Date.now() - CACHE_SAVED_AT)/60000);
+  box.innerHTML = `<div class="banner offline">⚠ Hors-ligne : données en cache local, sauvegardées il y a <b>${ago} min</b>. Le rafraîchissement automatique réessaiera en arrière-plan.</div>`;
 }
 
 function renderCities(){
   const box = document.getElementById("cities");
   box.innerHTML = "";
-  for(const city of DATA.cities){
-    const n = (DATA.results[city]||[]).length;
+  const allCount = DATA.cities.reduce((s,c)=> s + (DATA.results[c]||[]).length, 0);
+  const entries = [["__ALL__","Toutes les villes",allCount], ...DATA.cities.map(c => [c, c, (DATA.results[c]||[]).length])];
+  for(const [key,label,n] of entries){
     const b = document.createElement("button");
     b.className = "city-btn";
-    b.dataset.city = city;
-    b.innerHTML = `<span class="dot" style="background:${CITY_COLORS[city]}"></span>${city}<span class="cnt">${n}</span>`;
-    b.onclick = () => { currentCity = city; renderCity(); };
+    b.dataset.city = key;
+    b.innerHTML = `<span class="dot" style="background:${CITY_COLORS[key]}"></span>${label}<span class="cnt">${n}</span>`;
+    b.onclick = () => { FILTERS.city = key; savePrefs(); renderCity(); };
     box.appendChild(b);
   }
 }
 
+// fusionne toutes les villes en une seule liste, chaque opportunité taguée avec sa ville
+function poolFor(city){
+  if(city === "__ALL__"){
+    const pool = [];
+    for(const c of DATA.cities) for(const o of (DATA.results[c]||[])) pool.push(Object.assign({_city:c}, o));
+    return pool;
+  }
+  return (DATA.results[city]||[]).map(o => Object.assign({_city:city}, o));
+}
+
+function modelField(o, base){ // base: "sale" | "profit" | "roi"
+  if(FILTERS.model === "alt") return o[base+"_alt"];
+  return o[base];
+}
+
+function filterAndSort(pool){
+  const term = searchTerm.trim().toLowerCase();
+  let items = pool.filter(o => {
+    if(term && !(o.name_fr.toLowerCase().includes(term) || o.category.toLowerCase().includes(term))) return false;
+    if(FILTERS.category && o.category !== FILTERS.category) return false;
+    if(FILTERS.tier && String(o.tier) !== FILTERS.tier) return false;
+    if(FILTERS.favoritesOnly && !FAVORITES.has(oppKey(o._city, o.enchanted_id))) return false;
+    const roi = modelField(o, "roi");
+    if(roi === null || roi === undefined) return false; // modèle alternatif indisponible pour cet objet
+    if(roi < FILTERS.minRoi) return false;
+    if(o.profit_per_day < FILTERS.minProfitDay) return false;
+    return true;
+  });
+  const sortKey = {
+    roi: o => modelField(o,"roi"),
+    profit_day: o => o.profit_per_day,
+    profit_unit: o => modelField(o,"profit"),
+    volume: o => o.volume,
+  }[FILTERS.sort];
+  items.sort((a,b) => sortKey(b) - sortKey(a));
+  return items;
+}
+
+function trendBadge(delta){
+  if(delta === null || delta === undefined) return `<span class="trend flat">–</span>`;
+  if(delta > 0) return `<span class="trend up">▲ ${delta.toFixed(1)}</span>`;
+  if(delta < 0) return `<span class="trend down">▼ ${Math.abs(delta).toFixed(1)}</span>`;
+  return `<span class="trend flat">–</span>`;
+}
+
 function renderCity(){
-  // état actif des boutons
   document.querySelectorAll(".city-btn").forEach(b=>{
-    const on = b.dataset.city === currentCity;
+    const on = b.dataset.city === FILTERS.city;
     b.classList.toggle("active", on);
-    b.style.background = on ? CITY_COLORS[currentCity] : "";
+    b.style.background = on ? CITY_COLORS[FILTERS.city] : "";
   });
 
-  const items = (DATA.results[currentCity]||[]).slice(0,10);
+  const pool = poolFor(FILTERS.city);
+  const filtered = filterAndSort(pool);
+  const items = filtered.slice(0, TOP_DISPLAY);
   const list = document.getElementById("list");
+  const banner = document.getElementById("banner");
+  BY_KEY.clear();
+
+  const capital = items.reduce((s,o) => s + o.buy_cost + o.mat_cost, 0);
+  if(items.length){
+    banner.innerHTML = `<div class="banner">Capital nécessaire pour ce top ${items.length} : <b>${fmt(capital)}</b> argent · ${filtered.length} opportunité(s) après filtres</div>`;
+  } else {
+    banner.innerHTML = "";
+  }
 
   if(!items.length){
-    list.innerHTML = `<div class="empty">Aucune opportunité fraîche à ${currentCity} pour l'instant.<br>Les prix se remplissent quand des joueurs consultent le marché en jeu.</div>`;
+    const why = pool.length ? "Aucune opportunité ne passe tes filtres actuels." : `Aucune opportunité fraîche${FILTERS.city==="__ALL__"?"":" à "+FILTERS.city} pour l'instant.`;
+    list.innerHTML = `<div class="empty">${why}<br>Les prix se remplissent quand des joueurs consultent le marché en jeu.</div>`;
+    renderFooter();
     return;
   }
 
-  list.innerHTML = items.map((o,i)=>`
-    <div class="row">
+  list.innerHTML = items.map((o,i)=>{
+    const key = oppKey(o._city, o.enchanted_id);
+    BY_KEY.set(key, o);
+    const isFav = FAVORITES.has(key);
+    const isOpen = EXPANDED.has(key);
+    const sale = modelField(o,"sale"), profit = modelField(o,"profit"), roi = modelField(o,"roi");
+    const cityTag = FILTERS.city === "__ALL__" ? `<span class="city-tag" style="background:${CITY_COLORS[o._city]}">${o._city}</span>` : "";
+    const detail = isOpen ? `
+      <div class="detail">
+        <span>Achat .0 : <b>${fmt(o.buy_cost)}</b></span>
+        <span>Runes ×${o.rune_count} : <b>${fmt(o.mat_cost)}</b></span>
+        <span>Vente : <b>${fmt(sale)}</b></span>
+        <button class="copy-btn" data-action="copy" data-key="${key}">Copier</button>
+      </div>` : "";
+    return `
+    <div class="row" data-key="${key}">
+      <button class="star ${isFav?'on':''}" data-action="fav" data-key="${key}">${isFav?'★':'☆'}</button>
       <div class="rank">${i+1}</div>
       <div class="imgs">
         <img src="${img(o.base_id)}" onerror="this.src='${FALLBACK}'" alt="">
@@ -184,22 +398,98 @@ function renderCity(){
         <div class="tags">
           <span>T${o.tier} · ${o.category}</span>
           <span class="badge">.0 → .1</span>
+          ${cityTag}
           <span><span class="fresh" style="background:${freshColor(o.age_hours)}"></span> ${o.age_hours} h</span>
+          ${trendBadge(o.roi_delta)}
         </div>
       </div>
       <div class="stats">
-        <div class="stat roi"><div class="v">${o.roi}%</div><div class="l">ROI</div></div>
+        <div class="stat roi"><div class="v">${roi}%</div><div class="l">ROI</div></div>
         <div class="stat day"><div class="v">${fmt(o.profit_per_day)}</div><div class="l">Silver/jour</div></div>
-        <div class="stat"><div class="v">${fmt(o.profit)}</div><div class="l">Profit/u</div></div>
+        <div class="stat"><div class="v">${fmt(profit)}</div><div class="l">Profit/u</div></div>
         <div class="stat"><div class="v">${o.volume}</div><div class="l">Vendus/j</div></div>
       </div>
+      ${detail}
     </div>
-  `).join("");
+  `;}).join("");
+
+  renderFooter();
 }
 
-document.getElementById("footer").innerHTML =
-  "Prix : Albion Online Data Project · Images : render.albiononline.com · non affilié à Sandbox Interactive.<br>"+
-  "Le « vendus/jour » est un signal relatif de liquidité (sous-estimé), pas un chiffre exact. Vérifie toujours en jeu avant d'agir.";
+function toggleFav(key){
+  if(FAVORITES.has(key)) FAVORITES.delete(key); else FAVORITES.add(key);
+  savePrefs();
+  renderCity();
+}
+function toggleExpand(key){
+  if(EXPANDED.has(key)) EXPANDED.delete(key); else EXPANDED.add(key);
+  renderCity();
+}
+function copyRow(key){
+  const o = BY_KEY.get(key);
+  if(!o) return;
+  const sale = modelField(o,"sale"), profit = modelField(o,"profit"), roi = modelField(o,"roi");
+  const text = `${o.name_fr} (${o._city}) — achat ${fmt(o.buy_cost)} + runes×${o.rune_count} (${fmt(o.mat_cost)}) → vente ${fmt(sale)} · profit ${fmt(profit)} (${roi}% ROI)`;
+  if(navigator.clipboard) navigator.clipboard.writeText(text).catch(()=>{});
+}
+
+document.getElementById("list").addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-action]");
+  if(btn){
+    e.stopPropagation();
+    const key = btn.dataset.key;
+    if(btn.dataset.action === "fav") toggleFav(key);
+    if(btn.dataset.action === "copy") copyRow(key);
+    return;
+  }
+  const row = e.target.closest(".row");
+  if(row) toggleExpand(row.dataset.key);
+});
+
+document.getElementById("q").addEventListener("input", e => { searchTerm = e.target.value; renderCity(); });
+document.getElementById("fCategory").addEventListener("change", e => { FILTERS.category = e.target.value; savePrefs(); renderCity(); });
+document.getElementById("fTier").addEventListener("change", e => { FILTERS.tier = e.target.value; savePrefs(); renderCity(); });
+document.getElementById("fSort").addEventListener("change", e => { FILTERS.sort = e.target.value; savePrefs(); renderCity(); });
+document.getElementById("fMinRoi").addEventListener("input", e => { FILTERS.minRoi = Number(e.target.value)||0; savePrefs(); renderCity(); });
+document.getElementById("fMinDay").addEventListener("input", e => { FILTERS.minProfitDay = Number(e.target.value)||0; savePrefs(); renderCity(); });
+document.getElementById("favToggle").addEventListener("click", () => {
+  FILTERS.favoritesOnly = !FILTERS.favoritesOnly;
+  document.getElementById("favToggle").classList.toggle("active", FILTERS.favoritesOnly);
+  savePrefs(); renderCity();
+});
+document.getElementById("modelToggle").addEventListener("click", e => {
+  const btn = e.target.closest("button[data-model]");
+  if(!btn) return;
+  FILTERS.model = btn.dataset.model;
+  applyFiltersToControls();
+  savePrefs(); renderCity();
+});
+
+function renderFooter(){
+  document.getElementById("footer").innerHTML =
+    `Filtres serveur actifs : fraîcheur &lt; <b>${DATA.config.fresh_hours} h</b> · volume min <b>${DATA.config.min_volume}</b>/j · taxe <b>${(DATA.config.sales_tax*100)}%</b>. `+
+    `Modèle affiché : <b>${FILTERS.model === "alt" ? (DATA.config.alt_sale_model === "instant" ? "vente instantanée" : "mise en vente") : (DATA.config.sale_model === "instant" ? "vente instantanée" : "mise en vente")}</b> `+
+    `(le profit/jour reste calculé sur le modèle serveur par défaut).<br>`+
+    "Prix : Albion Online Data Project · Images : render.albiononline.com · non affilié à Sandbox Interactive.<br>"+
+    "Le « vendus/jour » est un signal relatif de liquidité (sous-estimé), pas un chiffre exact. Vérifie toujours en jeu avant d'agir.";
+}
+
+function startAutoRefresh(){
+  setInterval(async () => {
+    try{
+      const res = await fetch("data.json?v=" + Date.now());
+      if(!res.ok) return;
+      const fresh = await res.json();
+      if(fresh.generated_utc === DATA.generated_utc) return; // rien de nouveau
+      DATA = fresh;
+      OFFLINE = false;
+      safeLocalSet(CACHE_KEY, { data: DATA, savedAt: Date.now() });
+      buildCategoryOptions();
+      applyFiltersToControls();
+      renderAll();
+    }catch{ /* on retentera au prochain tick, sans casser l'affichage courant */ }
+  }, 60000);
+}
 
 load();
 </script>

@@ -85,6 +85,26 @@ async function fetchJson(url) {
   return res.json();
 }
 
+// Réessaie sur pannes transitoires (réseau, 5xx, 429). Pas de retry sur 4xx
+// (requête invalide — réessayer ne changera rien).
+const RETRY_BACKOFF_MS = [500, 1500, 4000];
+async function fetchJsonWithRetry(url) {
+  let lastErr;
+  for (let attempt = 0; attempt <= RETRY_BACKOFF_MS.length; attempt++) {
+    try {
+      return await fetchJson(url);
+    } catch (e) {
+      lastErr = e;
+      const m = /^HTTP (\d+)/.exec(e.message);
+      const status = m ? Number(m[1]) : null;
+      const retriable = status === null || status === 429 || status >= 500;
+      if (!retriable || attempt === RETRY_BACKOFF_MS.length) throw e;
+      await sleep(RETRY_BACKOFF_MS[attempt]);
+    }
+  }
+  throw lastErr;
+}
+
 const locParam = () => CONFIG.CITIES.map(encodeURIComponent).join(",");
 
 // ----------------------------------------------------------------------------
@@ -98,7 +118,13 @@ async function fetchPrices(itemIds) {
   for (const batch of batches) {
     const ids = batch.join(",");
     const url = `${CONFIG.SERVER}/api/v2/stats/prices/${ids}.json?locations=${locParam()}&qualities=1`;
-    const rows = await fetchJson(url);
+    let rows;
+    try {
+      rows = await fetchJsonWithRetry(url);
+    } catch (e) {
+      console.log("  (prix) lot ignoré après échecs répétés :", e.message);
+      done++; await sleep(CONFIG.DELAY_MS); continue;
+    }
     for (const r of rows) {
       const id = r.item_id;
       const city = r.city || r.location;
@@ -130,7 +156,7 @@ async function fetchVolumes(itemIds) {
     const url = `${CONFIG.SERVER}/api/v2/stats/history/${ids}.json?locations=${locParam()}&qualities=1&time-scale=24`;
     let rows;
     try {
-      rows = await fetchJson(url);
+      rows = await fetchJsonWithRetry(url);
     } catch (e) {
       console.log("  (volume) lot ignoré :", e.message);
       done++; await sleep(CONFIG.DELAY_MS); continue;
@@ -167,19 +193,26 @@ function computeOpportunity(item, city, priceMap, volMap) {
   const matCost = item.rune_count * runePrice;
   const totalCost = (basePrice + matCost) * (1 + CONFIG.STATION_FEE_PCT);
 
-  // --- côté vente ---
-  let grossSale, saleDate;
-  if (CONFIG.SALE_MODEL === "instant") {
-    grossSale = ench.buy_max * (1 - CONFIG.SALES_TAX);
-    saleDate = ench.buy_date;
-  } else {
-    grossSale = ench.sell_min * (1 - CONFIG.UNDERCUT) * (1 - CONFIG.SALES_TAX - CONFIG.SETUP_FEE);
-    saleDate = ench.sell_date;
-  }
+  // --- côté vente : les deux modèles sont calculés (aucun appel API en plus,
+  //     les deux prix sont déjà en main), le modèle "primaire" pilote les
+  //     filtres et le champ historique `sale/profit/roi`, l'autre est exposé
+  //     en `*_alt` pour comparaison côté front.
+  const saleInstant = { grossSale: ench.buy_max * (1 - CONFIG.SALES_TAX), saleDate: ench.buy_date };
+  const saleListing = {
+    grossSale: ench.sell_min * (1 - CONFIG.UNDERCUT) * (1 - CONFIG.SALES_TAX - CONFIG.SETUP_FEE),
+    saleDate: ench.sell_date,
+  };
+  const primary = CONFIG.SALE_MODEL === "instant" ? saleInstant : saleListing;
+  const alt = CONFIG.SALE_MODEL === "instant" ? saleListing : saleInstant;
+
+  const { grossSale, saleDate } = primary;
   if (grossSale <= 0) return null;
 
   const profit = grossSale - totalCost;
   const roi = profit / totalCost;
+
+  const altProfit = alt.grossSale > 0 ? alt.grossSale - totalCost : null;
+  const altRoi = altProfit !== null ? altProfit / totalCost : null;
 
   // --- fraîcheur : le pire des trois âges ---
   const age = Math.max(ageHours(base.sell_date), ageHours(saleDate), ageHours(rune.sell_date));
@@ -201,6 +234,9 @@ function computeOpportunity(item, city, priceMap, volMap) {
     sale: Math.round(grossSale),
     profit: Math.round(profit),
     roi: +(roi * 100).toFixed(1),
+    sale_alt: alt.grossSale > 0 ? Math.round(alt.grossSale) : null,
+    profit_alt: altProfit !== null ? Math.round(altProfit) : null,
+    roi_alt: altRoi !== null ? +(altRoi * 100).toFixed(1) : null,
     volume: +volume.toFixed(1),
     profit_per_day: Math.round(profitPerDay),
     age_hours: +age.toFixed(1),
@@ -264,12 +300,34 @@ async function main() {
     process.exit(1);
   }
 
+  const outPath = path.join(__dirname, "..", "docs", "data.json");
+
+  // --- tendance : diff du ROI avec le run précédent (même objet + ville) ---
+  let prevRoi = new Map();
+  try {
+    const prev = JSON.parse(fs.readFileSync(outPath, "utf-8"));
+    for (const city of Object.keys(prev.results || {})) {
+      for (const opp of prev.results[city]) {
+        prevRoi.set(`${opp.enchanted_id}|${city}`, opp.roi);
+      }
+    }
+  } catch {
+    // premier run, ou fichier absent/corrompu : pas d'historique, roi_delta restera null
+  }
+  for (const city of CONFIG.CITIES) {
+    for (const opp of results[city]) {
+      const before = prevRoi.get(`${opp.enchanted_id}|${city}`);
+      opp.roi_delta = before !== undefined ? +(opp.roi - before).toFixed(1) : null;
+    }
+  }
+
   const out = {
     generated_utc: new Date().toISOString(),
     server: CONFIG.SERVER,
     cities: CONFIG.CITIES,
     config: {
       sale_model: CONFIG.SALE_MODEL,
+      alt_sale_model: CONFIG.SALE_MODEL === "instant" ? "listing" : "instant",
       sales_tax: CONFIG.SALES_TAX,
       fresh_hours: CONFIG.FRESH_HOURS,
       min_volume: CONFIG.MIN_VOLUME,
@@ -277,7 +335,6 @@ async function main() {
     results,
   };
 
-  const outPath = path.join(__dirname, "..", "docs", "data.json");
   fs.writeFileSync(outPath, JSON.stringify(out));
   console.log("Écrit :", outPath);
 }
