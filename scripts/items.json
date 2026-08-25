@@ -1,0 +1,1827 @@
+{
+  "generated_utc": "2026-08-25",
+  "source": "ao-bin-dumps (items.xml) — quantités de runes .0->.1 lues dans upgraderequirements",
+  "scope": "T4/T5 enchantables : armes, armures (casque/torse/bottes), capes, sacs — hors artefacts",
+  "enchant_step": ".0 -> .1 (runes uniquement)",
+  "count": 202,
+  "items": [
+    {
+      "base_id": "T4_2H_CROSSBOW",
+      "enchanted_id": "T4_2H_CROSSBOW@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Arbalète de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_CROSSBOWLARGE",
+      "enchanted_id": "T4_2H_CROSSBOWLARGE@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Arbalète lourde de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_1HCROSSBOW",
+      "enchanted_id": "T4_MAIN_1HCROSSBOW@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Arbalète légère de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_2H_WARBOW",
+      "enchanted_id": "T4_2H_WARBOW@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Arc de guerre de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_BOW",
+      "enchanted_id": "T4_2H_BOW@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Arc de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_LONGBOW",
+      "enchanted_id": "T4_2H_LONGBOW@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Arc long de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_POLEHAMMER",
+      "enchanted_id": "T4_2H_POLEHAMMER@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bec de corbin de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_KNUCKLES_SET2",
+      "enchanted_id": "T4_2H_KNUCKLES_SET2@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Brassards de bataille de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_HOLYSTAFF",
+      "enchanted_id": "T4_MAIN_HOLYSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton béni de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_MAIN_CURSEDSTAFF",
+      "enchanted_id": "T4_MAIN_CURSEDSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton damné de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_MAIN_FIRESTAFF",
+      "enchanted_id": "T4_MAIN_FIRESTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton de feu de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_MAIN_FROSTSTAFF",
+      "enchanted_id": "T4_MAIN_FROSTSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton de givre de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_2H_DIVINESTAFF",
+      "enchanted_id": "T4_2H_DIVINESTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton divin de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_DEMONICSTAFF",
+      "enchanted_id": "T4_2H_DEMONICSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton démoniaque de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_GLACIALSTAFF",
+      "enchanted_id": "T4_2H_GLACIALSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton glacial de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_INFERNOSTAFF",
+      "enchanted_id": "T4_2H_INFERNOSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton infernal de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_NATURESTAFF",
+      "enchanted_id": "T4_MAIN_NATURESTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton naturel de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_2H_IRONCLADEDSTAFF",
+      "enchanted_id": "T4_2H_IRONCLADEDSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton sans faille de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_WILDSTAFF",
+      "enchanted_id": "T4_2H_WILDSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton sauvage de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_DOUBLEBLADEDSTAFF",
+      "enchanted_id": "T4_2H_DOUBLEBLADEDSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton à double tranchant de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_ENIGMATICSTAFF",
+      "enchanted_id": "T4_2H_ENIGMATICSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton énigmatique de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_ARCANESTAFF",
+      "enchanted_id": "T4_MAIN_ARCANESTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Bâton ésotérique de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_2H_CLAYMORE",
+      "enchanted_id": "T4_2H_CLAYMORE@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Claymore de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_DAGGER",
+      "enchanted_id": "T4_MAIN_DAGGER@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Dague de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_2H_KNUCKLES_SET1",
+      "enchanted_id": "T4_2H_KNUCKLES_SET1@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Gantelets de bagarreur de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_KNUCKLES_SET3",
+      "enchanted_id": "T4_2H_KNUCKLES_SET3@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Gantelets à pointes de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_GLAIVE",
+      "enchanted_id": "T4_2H_GLAIVE@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Glaive de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_HOLYSTAFF",
+      "enchanted_id": "T4_2H_HOLYSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Grand bâton béni de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_CURSEDSTAFF",
+      "enchanted_id": "T4_2H_CURSEDSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Grand bâton damné de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_FIRESTAFF",
+      "enchanted_id": "T4_2H_FIRESTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Grand bâton de feu de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_FROSTSTAFF",
+      "enchanted_id": "T4_2H_FROSTSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Grand bâton de givre de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_NATURESTAFF",
+      "enchanted_id": "T4_2H_NATURESTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Grand bâton naturel de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_ARCANESTAFF",
+      "enchanted_id": "T4_2H_ARCANESTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Grand bâton ésotérique de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_HAMMER",
+      "enchanted_id": "T4_2H_HAMMER@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Grand marteau de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_AXE",
+      "enchanted_id": "T4_2H_AXE@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Grande hache de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_CLAWPAIR",
+      "enchanted_id": "T4_2H_CLAWPAIR@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Griffes de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_AXE",
+      "enchanted_id": "T4_MAIN_AXE@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Hache de guerre de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_2H_HALBERD",
+      "enchanted_id": "T4_2H_HALBERD@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Hallebarde de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_SPEAR",
+      "enchanted_id": "T4_MAIN_SPEAR@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Lance de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_2H_QUARTERSTAFF",
+      "enchanted_id": "T4_2H_QUARTERSTAFF@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Long bâton de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_HAMMER",
+      "enchanted_id": "T4_MAIN_HAMMER@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Marteau de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_MAIN_MACE",
+      "enchanted_id": "T4_MAIN_MACE@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Masse de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_2H_MACE",
+      "enchanted_id": "T4_2H_MACE@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Masse lourde de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_FLAIL",
+      "enchanted_id": "T4_2H_FLAIL@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Morgenstern de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_DAGGERPAIR",
+      "enchanted_id": "T4_2H_DAGGERPAIR@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Paire de dagues de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_SPEAR",
+      "enchanted_id": "T4_2H_SPEAR@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Pique de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_2H_DUALSWORD",
+      "enchanted_id": "T4_2H_DUALSWORD@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Épée double de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T4_MAIN_SWORD",
+      "enchanted_id": "T4_MAIN_SWORD@1",
+      "tier": 4,
+      "category": "Arme",
+      "name_fr": "Épée large de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_CROSSBOW",
+      "enchanted_id": "T5_2H_CROSSBOW@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Arbalète de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_CROSSBOWLARGE",
+      "enchanted_id": "T5_2H_CROSSBOWLARGE@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Arbalète lourde de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_1HCROSSBOW",
+      "enchanted_id": "T5_MAIN_1HCROSSBOW@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Arbalète légère de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_WARBOW",
+      "enchanted_id": "T5_2H_WARBOW@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Arc de guerre de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_BOW",
+      "enchanted_id": "T5_2H_BOW@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Arc de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_LONGBOW",
+      "enchanted_id": "T5_2H_LONGBOW@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Arc long de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_POLEHAMMER",
+      "enchanted_id": "T5_2H_POLEHAMMER@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bec de corbin de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_KNUCKLES_SET2",
+      "enchanted_id": "T5_2H_KNUCKLES_SET2@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Brassards de bataille de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_HOLYSTAFF",
+      "enchanted_id": "T5_MAIN_HOLYSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton béni de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_MAIN_CURSEDSTAFF",
+      "enchanted_id": "T5_MAIN_CURSEDSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton damné de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_MAIN_FIRESTAFF",
+      "enchanted_id": "T5_MAIN_FIRESTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton de feu de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_MAIN_FROSTSTAFF",
+      "enchanted_id": "T5_MAIN_FROSTSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton de givre de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_DIVINESTAFF",
+      "enchanted_id": "T5_2H_DIVINESTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton divin de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_DEMONICSTAFF",
+      "enchanted_id": "T5_2H_DEMONICSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton démoniaque de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_GLACIALSTAFF",
+      "enchanted_id": "T5_2H_GLACIALSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton glacial de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_INFERNOSTAFF",
+      "enchanted_id": "T5_2H_INFERNOSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton infernal de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_NATURESTAFF",
+      "enchanted_id": "T5_MAIN_NATURESTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton naturel de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_IRONCLADEDSTAFF",
+      "enchanted_id": "T5_2H_IRONCLADEDSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton sans faille de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_WILDSTAFF",
+      "enchanted_id": "T5_2H_WILDSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton sauvage de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_DOUBLEBLADEDSTAFF",
+      "enchanted_id": "T5_2H_DOUBLEBLADEDSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton à double tranchant de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_ENIGMATICSTAFF",
+      "enchanted_id": "T5_2H_ENIGMATICSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton énigmatique de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_ARCANESTAFF",
+      "enchanted_id": "T5_MAIN_ARCANESTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Bâton ésotérique de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_CLAYMORE",
+      "enchanted_id": "T5_2H_CLAYMORE@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Claymore de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_DAGGER",
+      "enchanted_id": "T5_MAIN_DAGGER@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Dague de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_KNUCKLES_SET1",
+      "enchanted_id": "T5_2H_KNUCKLES_SET1@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Gantelets de bagarreur de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_KNUCKLES_SET3",
+      "enchanted_id": "T5_2H_KNUCKLES_SET3@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Gantelets à pointes de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_GLAIVE",
+      "enchanted_id": "T5_2H_GLAIVE@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Glaive de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_HOLYSTAFF",
+      "enchanted_id": "T5_2H_HOLYSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Grand bâton béni de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_CURSEDSTAFF",
+      "enchanted_id": "T5_2H_CURSEDSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Grand bâton damné de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_FIRESTAFF",
+      "enchanted_id": "T5_2H_FIRESTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Grand bâton de feu de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_FROSTSTAFF",
+      "enchanted_id": "T5_2H_FROSTSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Grand bâton de givre de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_NATURESTAFF",
+      "enchanted_id": "T5_2H_NATURESTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Grand bâton naturel de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_ARCANESTAFF",
+      "enchanted_id": "T5_2H_ARCANESTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Grand bâton ésotérique de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_HAMMER",
+      "enchanted_id": "T5_2H_HAMMER@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Grand marteau de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_AXE",
+      "enchanted_id": "T5_2H_AXE@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Grande hache de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_CLAWPAIR",
+      "enchanted_id": "T5_2H_CLAWPAIR@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Griffes de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_AXE",
+      "enchanted_id": "T5_MAIN_AXE@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Hache de guerre de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_HALBERD",
+      "enchanted_id": "T5_2H_HALBERD@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Hallebarde de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_SPEAR",
+      "enchanted_id": "T5_MAIN_SPEAR@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Lance de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_QUARTERSTAFF",
+      "enchanted_id": "T5_2H_QUARTERSTAFF@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Long bâton de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_HAMMER",
+      "enchanted_id": "T5_MAIN_HAMMER@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Marteau de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_MAIN_MACE",
+      "enchanted_id": "T5_MAIN_MACE@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Masse de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T5_2H_MACE",
+      "enchanted_id": "T5_2H_MACE@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Masse lourde de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_FLAIL",
+      "enchanted_id": "T5_2H_FLAIL@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Morgenstern de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_DAGGERPAIR",
+      "enchanted_id": "T5_2H_DAGGERPAIR@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Paire de dagues de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_SPEAR",
+      "enchanted_id": "T5_2H_SPEAR@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Pique de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_2H_DUALSWORD",
+      "enchanted_id": "T5_2H_DUALSWORD@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Épée double de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 384
+    },
+    {
+      "base_id": "T5_MAIN_SWORD",
+      "enchanted_id": "T5_MAIN_SWORD@1",
+      "tier": 5,
+      "category": "Arme",
+      "name_fr": "Épée large de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 288
+    },
+    {
+      "base_id": "T4_HEAD_LEATHER_SET3",
+      "enchanted_id": "T4_HEAD_LEATHER_SET3@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Capuche d'assassin de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_LEATHER_SET2",
+      "enchanted_id": "T4_HEAD_LEATHER_SET2@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Capuche de chasseur de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_LEATHER_SET1",
+      "enchanted_id": "T4_HEAD_LEATHER_SET1@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Capuche de mercenaire de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_LEATHER_ROYAL",
+      "enchanted_id": "T4_HEAD_LEATHER_ROYAL@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Capuche royale de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_CLOTH_SET2",
+      "enchanted_id": "T4_HEAD_CLOTH_SET2@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Capuchon d'ecclésiastique de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_CLOTH_SET1",
+      "enchanted_id": "T4_HEAD_CLOTH_SET1@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Capuchon d'érudit de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_CLOTH_SET3",
+      "enchanted_id": "T4_HEAD_CLOTH_SET3@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Capuchon de mage de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_CLOTH_ROYAL",
+      "enchanted_id": "T4_HEAD_CLOTH_ROYAL@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Capuchon royal de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_PLATE_SET2",
+      "enchanted_id": "T4_HEAD_PLATE_SET2@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Casque de chevalier de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_PLATE_SET3",
+      "enchanted_id": "T4_HEAD_PLATE_SET3@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Casque de gardien de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_PLATE_SET1",
+      "enchanted_id": "T4_HEAD_PLATE_SET1@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Casque de soldat de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_HEAD_PLATE_ROYAL",
+      "enchanted_id": "T4_HEAD_PLATE_ROYAL@1",
+      "tier": 4,
+      "category": "Casque",
+      "name_fr": "Casque royale de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_LEATHER_SET3",
+      "enchanted_id": "T5_HEAD_LEATHER_SET3@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Capuche d'assassin de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_LEATHER_SET2",
+      "enchanted_id": "T5_HEAD_LEATHER_SET2@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Capuche de chasseur de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_LEATHER_SET1",
+      "enchanted_id": "T5_HEAD_LEATHER_SET1@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Capuche de mercenaire de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_LEATHER_ROYAL",
+      "enchanted_id": "T5_HEAD_LEATHER_ROYAL@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Capuche royale de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_CLOTH_SET2",
+      "enchanted_id": "T5_HEAD_CLOTH_SET2@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Capuchon d'ecclésiastique de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_CLOTH_SET1",
+      "enchanted_id": "T5_HEAD_CLOTH_SET1@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Capuchon d'érudit de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_CLOTH_SET3",
+      "enchanted_id": "T5_HEAD_CLOTH_SET3@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Capuchon de mage de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_CLOTH_ROYAL",
+      "enchanted_id": "T5_HEAD_CLOTH_ROYAL@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Capuchon royal de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_PLATE_SET2",
+      "enchanted_id": "T5_HEAD_PLATE_SET2@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Casque de chevalier de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_PLATE_SET3",
+      "enchanted_id": "T5_HEAD_PLATE_SET3@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Casque de gardien de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_PLATE_SET1",
+      "enchanted_id": "T5_HEAD_PLATE_SET1@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Casque de soldat de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_HEAD_PLATE_ROYAL",
+      "enchanted_id": "T5_HEAD_PLATE_ROYAL@1",
+      "tier": 5,
+      "category": "Casque",
+      "name_fr": "Casque royal de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_ARMOR_PLATE_SET2",
+      "enchanted_id": "T4_ARMOR_PLATE_SET2@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Armure de chevalier de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_PLATE_SET3",
+      "enchanted_id": "T4_ARMOR_PLATE_SET3@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Armure de gardien de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_PLATE_SET1",
+      "enchanted_id": "T4_ARMOR_PLATE_SET1@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Armure de soldat de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_PLATE_ROYAL",
+      "enchanted_id": "T4_ARMOR_PLATE_ROYAL@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Armure royale de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_CLOTH_SET2",
+      "enchanted_id": "T4_ARMOR_CLOTH_SET2@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Robe d'ecclésiastique de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_CLOTH_SET1",
+      "enchanted_id": "T4_ARMOR_CLOTH_SET1@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Robe d'érudit de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_CLOTH_SET3",
+      "enchanted_id": "T4_ARMOR_CLOTH_SET3@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Robe de mage de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_CLOTH_ROYAL",
+      "enchanted_id": "T4_ARMOR_CLOTH_ROYAL@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Robe royale de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_LEATHER_SET3",
+      "enchanted_id": "T4_ARMOR_LEATHER_SET3@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Veste d'assassin de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_LEATHER_SET2",
+      "enchanted_id": "T4_ARMOR_LEATHER_SET2@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Veste de chasseur de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_LEATHER_SET1",
+      "enchanted_id": "T4_ARMOR_LEATHER_SET1@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Veste de mercenaire de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_ARMOR_LEATHER_ROYAL",
+      "enchanted_id": "T4_ARMOR_LEATHER_ROYAL@1",
+      "tier": 4,
+      "category": "Armure (torse)",
+      "name_fr": "Veste royale de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_PLATE_SET2",
+      "enchanted_id": "T5_ARMOR_PLATE_SET2@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Armure de chevalier de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_PLATE_SET3",
+      "enchanted_id": "T5_ARMOR_PLATE_SET3@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Armure de gardien de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_PLATE_SET1",
+      "enchanted_id": "T5_ARMOR_PLATE_SET1@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Armure de soldat de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_PLATE_ROYAL",
+      "enchanted_id": "T5_ARMOR_PLATE_ROYAL@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Armure royale de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_CLOTH_SET2",
+      "enchanted_id": "T5_ARMOR_CLOTH_SET2@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Robe d'ecclésiastique de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_CLOTH_SET1",
+      "enchanted_id": "T5_ARMOR_CLOTH_SET1@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Robe d'érudit de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_CLOTH_SET3",
+      "enchanted_id": "T5_ARMOR_CLOTH_SET3@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Robe de mage de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_CLOTH_ROYAL",
+      "enchanted_id": "T5_ARMOR_CLOTH_ROYAL@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Robe royale de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_LEATHER_SET3",
+      "enchanted_id": "T5_ARMOR_LEATHER_SET3@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Veste d'assassin de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_LEATHER_SET2",
+      "enchanted_id": "T5_ARMOR_LEATHER_SET2@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Veste de chasseur de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_LEATHER_SET1",
+      "enchanted_id": "T5_ARMOR_LEATHER_SET1@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Veste de mercenaire de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_ARMOR_LEATHER_ROYAL",
+      "enchanted_id": "T5_ARMOR_LEATHER_ROYAL@1",
+      "tier": 5,
+      "category": "Armure (torse)",
+      "name_fr": "Veste royale de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_SHOES_PLATE_SET2",
+      "enchanted_id": "T4_SHOES_PLATE_SET2@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Bottes de chevalier de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_PLATE_SET3",
+      "enchanted_id": "T4_SHOES_PLATE_SET3@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Bottes de gardien de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_PLATE_SET1",
+      "enchanted_id": "T4_SHOES_PLATE_SET1@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Bottes de soldat de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_PLATE_ROYAL",
+      "enchanted_id": "T4_SHOES_PLATE_ROYAL@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Bottes royales de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_LEATHER_SET3",
+      "enchanted_id": "T4_SHOES_LEATHER_SET3@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Chaussures d'assassin de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_LEATHER_SET2",
+      "enchanted_id": "T4_SHOES_LEATHER_SET2@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Chaussures de chasseur de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_LEATHER_SET1",
+      "enchanted_id": "T4_SHOES_LEATHER_SET1@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Chaussures de mercenaire de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_LEATHER_ROYAL",
+      "enchanted_id": "T4_SHOES_LEATHER_ROYAL@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Chaussures royales de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_CLOTH_SET2",
+      "enchanted_id": "T4_SHOES_CLOTH_SET2@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Sandales d'ecclésiastique de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_CLOTH_SET1",
+      "enchanted_id": "T4_SHOES_CLOTH_SET1@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Sandales d'érudit de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_CLOTH_SET3",
+      "enchanted_id": "T4_SHOES_CLOTH_SET3@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Sandales de mage de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_SHOES_CLOTH_ROYAL",
+      "enchanted_id": "T4_SHOES_CLOTH_ROYAL@1",
+      "tier": 4,
+      "category": "Bottes",
+      "name_fr": "Sandales royales de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_PLATE_SET2",
+      "enchanted_id": "T5_SHOES_PLATE_SET2@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Bottes de chevalier de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_PLATE_SET3",
+      "enchanted_id": "T5_SHOES_PLATE_SET3@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Bottes de gardien de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_PLATE_SET1",
+      "enchanted_id": "T5_SHOES_PLATE_SET1@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Bottes de soldat de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_PLATE_ROYAL",
+      "enchanted_id": "T5_SHOES_PLATE_ROYAL@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Bottes royales de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_LEATHER_SET3",
+      "enchanted_id": "T5_SHOES_LEATHER_SET3@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Chaussures d'assassin de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_LEATHER_SET2",
+      "enchanted_id": "T5_SHOES_LEATHER_SET2@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Chaussures de chasseur de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_LEATHER_SET1",
+      "enchanted_id": "T5_SHOES_LEATHER_SET1@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Chaussures de mercenaire de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_LEATHER_ROYAL",
+      "enchanted_id": "T5_SHOES_LEATHER_ROYAL@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Chaussures royales de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_CLOTH_SET2",
+      "enchanted_id": "T5_SHOES_CLOTH_SET2@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Sandales d'ecclésiastique de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_CLOTH_SET1",
+      "enchanted_id": "T5_SHOES_CLOTH_SET1@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Sandales d'érudit de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_CLOTH_SET3",
+      "enchanted_id": "T5_SHOES_CLOTH_SET3@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Sandales de mage de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_SHOES_CLOTH_ROYAL",
+      "enchanted_id": "T5_SHOES_CLOTH_ROYAL@1",
+      "tier": 5,
+      "category": "Bottes",
+      "name_fr": "Sandales royales de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_AVALON",
+      "enchanted_id": "T4_CAPEITEM_AVALON@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape avalonienne de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_FW_BRECILIEN",
+      "enchanted_id": "T4_CAPEITEM_FW_BRECILIEN@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Brecilien de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_FW_BRIDGEWATCH",
+      "enchanted_id": "T4_CAPEITEM_FW_BRIDGEWATCH@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Bridgewatch de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_FW_CAERLEON",
+      "enchanted_id": "T4_CAPEITEM_FW_CAERLEON@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Caerleon de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_SMUGGLER",
+      "enchanted_id": "T4_CAPEITEM_SMUGGLER@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Contrebandier de l'Adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_FW_FORTSTERLING",
+      "enchanted_id": "T4_CAPEITEM_FW_FORTSTERLING@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Fort Sterling de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_FW_LYMHURST",
+      "enchanted_id": "T4_CAPEITEM_FW_LYMHURST@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Lymhurst de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_FW_MARTLOCK",
+      "enchanted_id": "T4_CAPEITEM_FW_MARTLOCK@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Martlock de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_MORGANA",
+      "enchanted_id": "T4_CAPEITEM_MORGANA@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Morgana de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_FW_THETFORD",
+      "enchanted_id": "T4_CAPEITEM_FW_THETFORD@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de Thetford de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPE",
+      "enchanted_id": "T4_CAPE@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_KEEPER",
+      "enchanted_id": "T4_CAPEITEM_KEEPER@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape des gardiens de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_HERETIC",
+      "enchanted_id": "T4_CAPEITEM_HERETIC@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape des hérétiques de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_UNDEAD",
+      "enchanted_id": "T4_CAPEITEM_UNDEAD@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape des morts-vivants de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_CAPEITEM_DEMON",
+      "enchanted_id": "T4_CAPEITEM_DEMON@1",
+      "tier": 4,
+      "category": "Cape",
+      "name_fr": "Cape démoniaque de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_AVALON",
+      "enchanted_id": "T5_CAPEITEM_AVALON@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape avalonienne de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_FW_BRECILIEN",
+      "enchanted_id": "T5_CAPEITEM_FW_BRECILIEN@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Brecilien de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_FW_BRIDGEWATCH",
+      "enchanted_id": "T5_CAPEITEM_FW_BRIDGEWATCH@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Bridgewatch de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_FW_CAERLEON",
+      "enchanted_id": "T5_CAPEITEM_FW_CAERLEON@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Caerleon de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_SMUGGLER",
+      "enchanted_id": "T5_CAPEITEM_SMUGGLER@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Contrebandier de l'Expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_FW_FORTSTERLING",
+      "enchanted_id": "T5_CAPEITEM_FW_FORTSTERLING@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Fort Sterling de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_FW_LYMHURST",
+      "enchanted_id": "T5_CAPEITEM_FW_LYMHURST@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Lymhurst de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_FW_MARTLOCK",
+      "enchanted_id": "T5_CAPEITEM_FW_MARTLOCK@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Martlock de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_MORGANA",
+      "enchanted_id": "T5_CAPEITEM_MORGANA@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Morgana de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_FW_THETFORD",
+      "enchanted_id": "T5_CAPEITEM_FW_THETFORD@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de Thetford de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPE",
+      "enchanted_id": "T5_CAPE@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_KEEPER",
+      "enchanted_id": "T5_CAPEITEM_KEEPER@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape des gardiens de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_HERETIC",
+      "enchanted_id": "T5_CAPEITEM_HERETIC@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape des hérétiques de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_UNDEAD",
+      "enchanted_id": "T5_CAPEITEM_UNDEAD@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape des morts-vivants de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T5_CAPEITEM_DEMON",
+      "enchanted_id": "T5_CAPEITEM_DEMON@1",
+      "tier": 5,
+      "category": "Cape",
+      "name_fr": "Cape démoniaque de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 96
+    },
+    {
+      "base_id": "T4_BAG",
+      "enchanted_id": "T4_BAG@1",
+      "tier": 4,
+      "category": "Sac",
+      "name_fr": "Sac de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T4_BAG_INSIGHT",
+      "enchanted_id": "T4_BAG_INSIGHT@1",
+      "tier": 4,
+      "category": "Sac",
+      "name_fr": "Sacoche de perspicacité de l'adepte",
+      "rune_id": "T4_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_BAG",
+      "enchanted_id": "T5_BAG@1",
+      "tier": 5,
+      "category": "Sac",
+      "name_fr": "Sac de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    },
+    {
+      "base_id": "T5_BAG_INSIGHT",
+      "enchanted_id": "T5_BAG_INSIGHT@1",
+      "tier": 5,
+      "category": "Sac",
+      "name_fr": "Sacoche de perspicacité de l'expert",
+      "rune_id": "T5_RUNE",
+      "rune_count": 192
+    }
+  ]
+}
