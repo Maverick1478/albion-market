@@ -2,19 +2,206 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Albion Market</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Registre des Marchés — Albion</title>
 <style>
-  body{background:#0e1116;color:#d8b45a;font-family:Georgia,serif;
-       display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}
-  .box{text-align:center}
-  h1{font-size:28px;margin:0 0 8px}
-  p{color:#a9a08a;font-family:monospace}
+  :root{
+    --iron:#0e1116; --iron-2:#161b24; --iron-3:#1e2530;
+    --parch:#e8dfc8; --parch-dim:#a9a08a;
+    --gold:#d8b45a; --line:#2c3542;
+    --green:#5bb85b; --amber:#c98a3d; --red:#d9605a;
+    --caerleon:#b03030; --bridgewatch:#d98a3d; --lymhurst:#4a9d4a;
+    --martlock:#4a7dc4; --fortsterling:#c9cdd4; --thetford:#8a5cc4; --brecilien:#c44a9d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(216,180,90,.06), transparent 60%), var(--iron);
+    color:var(--parch); font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    line-height:1.5; padding:24px 16px 60px; min-height:100vh;
+  }
+  .wrap{max-width:1000px;margin:0 auto}
+
+  header{border-bottom:2px solid var(--gold);padding-bottom:14px;margin-bottom:18px}
+  .kicker{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.28em;
+          text-transform:uppercase;font-size:11px;color:var(--parch-dim)}
+  h1{font-size:32px;font-weight:600;margin-top:2px}
+  h1 .em{color:var(--gold)}
+  .meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px;font-size:12px;
+        color:var(--parch-dim);font-family:ui-monospace,monospace}
+  .meta b{color:var(--parch);font-weight:600}
+
+  /* city selector */
+  .cities{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+  .city-btn{display:flex;align-items:center;gap:8px;background:var(--iron-2);
+    border:1px solid var(--line);color:var(--parch-dim);border-radius:22px;
+    padding:8px 16px;font-family:inherit;font-size:14px;cursor:pointer;transition:.15s}
+  .city-btn:hover{border-color:var(--gold);color:var(--parch)}
+  .city-btn.active{color:#1a1408;font-weight:700;border-color:transparent}
+  .city-btn .dot{width:9px;height:9px;border-radius:50%}
+  .city-btn .cnt{font-family:ui-monospace,monospace;font-size:11px;opacity:.7}
+
+  /* legend */
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--parch-dim);
+          margin-bottom:16px;font-family:ui-monospace,monospace}
+  .legend span::before{content:"●";margin-right:5px}
+  .l-fresh::before{color:var(--green)} .l-mid::before{color:var(--amber)}
+
+  /* rows */
+  .row{display:grid;grid-template-columns:28px 92px 1fr auto;gap:14px;align-items:center;
+       background:linear-gradient(180deg,var(--iron-2),var(--iron-3));
+       border:1px solid var(--line);border-left:3px solid var(--gold);
+       border-radius:10px;padding:12px 16px;margin-bottom:10px}
+  .rank{font-family:ui-monospace,monospace;font-size:18px;color:var(--gold);text-align:center;font-weight:700}
+  .imgs{display:flex;align-items:center;gap:2px}
+  .imgs img{width:42px;height:42px;background:var(--iron);border-radius:6px}
+  .imgs .arr{color:var(--gold);font-size:13px}
+  .info .name{font-size:16px;color:var(--parch)}
+  .info .tags{font-size:11px;color:var(--parch-dim);font-family:ui-monospace,monospace;
+              margin-top:2px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .badge{background:rgba(91,184,91,.15);color:var(--green);border:1px solid rgba(91,184,91,.4);
+         border-radius:10px;padding:1px 7px;font-size:10px}
+  .fresh{width:8px;height:8px;border-radius:50%;display:inline-block}
+
+  .stats{display:flex;gap:18px;align-items:center;text-align:right}
+  .stat .v{font-family:ui-monospace,monospace;font-variant-numeric:tabular-nums;font-size:15px;color:var(--parch)}
+  .stat .l{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--parch-dim);font-family:ui-monospace,monospace}
+  .stat.roi .v{font-size:22px;color:var(--gold);font-weight:700}
+  .stat.day .v{color:var(--green)}
+
+  .empty{text-align:center;color:var(--parch-dim);padding:50px 20px;font-family:ui-monospace,monospace;font-size:14px}
+  footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);
+         font-size:11px;color:var(--parch-dim);font-family:ui-monospace,monospace;line-height:1.7}
+
+  @media(max-width:640px){
+    .row{grid-template-columns:24px 1fr;grid-template-areas:"rank info" "imgs stats"}
+    .rank{grid-area:rank} .imgs{grid-area:imgs} .info{grid-area:info} .stats{grid-area:stats;justify-content:flex-start;text-align:left;flex-wrap:wrap}
+    .stats{margin-top:4px}
+  }
 </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Le Registre des Marchés</h1>
-    <p>Site en construction — le dashboard arrive.</p>
+<div class="wrap">
+  <header>
+    <div class="kicker">Albion Online · Flips d'enchantement en quasi-direct</div>
+    <h1>Le Registre des <span class="em">Marchés</span></h1>
+    <div class="meta" id="meta">Chargement…</div>
+  </header>
+
+  <div class="cities" id="cities"></div>
+
+  <div class="legend">
+    <span class="l-fresh">Donnée fraîche (&lt; 2 h)</span>
+    <span class="l-mid">Donnée correcte</span>
+    <span>Trié par ROI · profit/jour = marge × ventes/jour</span>
   </div>
+
+  <div id="list"></div>
+
+  <footer id="footer"></footer>
+</div>
+
+<script>
+const CITY_COLORS = {
+  "Caerleon":"var(--caerleon)","Bridgewatch":"var(--bridgewatch)","Lymhurst":"var(--lymhurst)",
+  "Martlock":"var(--martlock)","Fort Sterling":"var(--fortsterling)","Thetford":"var(--thetford)","Brecilien":"var(--brecilien)"
+};
+// icône de secours si l'image de l'objet ne charge pas
+const FALLBACK = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='42'%3E%3Crect width='42' height='42' rx='6' fill='%231e2530'/%3E%3Ctext x='21' y='27' font-size='20' text-anchor='middle' fill='%23a9a08a'%3E%3F%3C/text%3E%3C/svg%3E";
+
+const fmt = n => Math.round(n).toLocaleString("fr-FR");
+const img = id => `https://render.albiononline.com/v1/item/${id}.png?size=64`;
+const freshColor = h => h < 2 ? "var(--green)" : "var(--amber)";
+
+let DATA = null;
+let currentCity = null;
+
+async function load(){
+  try{
+    const res = await fetch("data.json?v=" + Date.now());   // anti-cache
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    DATA = await res.json();
+  }catch(e){
+    document.getElementById("meta").textContent = "Impossible de charger data.json (" + e.message + ").";
+    document.getElementById("list").innerHTML = `<div class="empty">Les données ne sont pas encore disponibles.<br>Lance le workflow « Scan marché Albion » dans l'onglet Actions.</div>`;
+    return;
+  }
+  renderMeta();
+  renderCities();
+  // ville par défaut : la première qui a des résultats
+  currentCity = DATA.cities.find(c => (DATA.results[c]||[]).length) || DATA.cities[0];
+  renderCity();
+}
+
+function renderMeta(){
+  const d = new Date(DATA.generated_utc);
+  const ago = Math.round((Date.now() - d.getTime())/60000);
+  const model = DATA.config.sale_model === "instant" ? "vente instantanée" : "mise en vente";
+  document.getElementById("meta").innerHTML =
+    `Mis à jour il y a <b>${ago} min</b> · serveur <b>${DATA.server.replace("https://","").split(".")[0]}</b> · `+
+    `taxe <b>${(DATA.config.sales_tax*100)}%</b> · modèle <b>${model}</b>`;
+}
+
+function renderCities(){
+  const box = document.getElementById("cities");
+  box.innerHTML = "";
+  for(const city of DATA.cities){
+    const n = (DATA.results[city]||[]).length;
+    const b = document.createElement("button");
+    b.className = "city-btn";
+    b.dataset.city = city;
+    b.innerHTML = `<span class="dot" style="background:${CITY_COLORS[city]}"></span>${city}<span class="cnt">${n}</span>`;
+    b.onclick = () => { currentCity = city; renderCity(); };
+    box.appendChild(b);
+  }
+}
+
+function renderCity(){
+  // état actif des boutons
+  document.querySelectorAll(".city-btn").forEach(b=>{
+    const on = b.dataset.city === currentCity;
+    b.classList.toggle("active", on);
+    b.style.background = on ? CITY_COLORS[currentCity] : "";
+  });
+
+  const items = (DATA.results[currentCity]||[]).slice(0,10);
+  const list = document.getElementById("list");
+
+  if(!items.length){
+    list.innerHTML = `<div class="empty">Aucune opportunité fraîche à ${currentCity} pour l'instant.<br>Les prix se remplissent quand des joueurs consultent le marché en jeu.</div>`;
+    return;
+  }
+
+  list.innerHTML = items.map((o,i)=>`
+    <div class="row">
+      <div class="rank">${i+1}</div>
+      <div class="imgs">
+        <img src="${img(o.base_id)}" onerror="this.src='${FALLBACK}'" alt="">
+        <span class="arr">→</span>
+        <img src="${img(o.enchanted_id)}" onerror="this.src='${FALLBACK}'" alt="">
+      </div>
+      <div class="info">
+        <div class="name">${o.name_fr}</div>
+        <div class="tags">
+          <span>T${o.tier} · ${o.category}</span>
+          <span class="badge">.0 → .1</span>
+          <span><span class="fresh" style="background:${freshColor(o.age_hours)}"></span> ${o.age_hours} h</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat roi"><div class="v">${o.roi}%</div><div class="l">ROI</div></div>
+        <div class="stat day"><div class="v">${fmt(o.profit_per_day)}</div><div class="l">Silver/jour</div></div>
+        <div class="stat"><div class="v">${fmt(o.profit)}</div><div class="l">Profit/u</div></div>
+        <div class="stat"><div class="v">${o.volume}</div><div class="l">Vendus/j</div></div>
+      </div>
+    </div>
+  `).join("");
+}
+
+document.getElementById("footer").innerHTML =
+  "Prix : Albion Online Data Project · Images : render.albiononline.com · non affilié à Sandbox Interactive.<br>"+
+  "Le « vendus/jour » est un signal relatif de liquidité (sous-estimé), pas un chiffre exact. Vérifie toujours en jeu avant d'agir.";
+
+load();
+</script>
 </body>
 </html>
