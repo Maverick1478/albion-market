@@ -1,0 +1,43 @@
+name: Scan marché Albion
+
+# Quand le workflow se déclenche :
+on:
+  workflow_dispatch:        # bouton "Run workflow" pour lancer à la main
+  schedule:
+    - cron: "*/10 * * * *"  # automatiquement toutes les 10 minutes (heure UTC)
+
+# Autorise le workflow à réécrire data.json dans le dépôt
+permissions:
+  contents: write
+
+# Évite que deux exécutions se chevauchent
+concurrency:
+  group: scan-marche
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Lancer le scan
+        run: node scripts/scan.js
+
+      - name: Publier data.json (si modifié)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json
+          if git diff --staged --quiet; then
+            echo "Aucun changement dans data.json — rien à publier."
+          else
+            git commit -m "maj data.json ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push
+          fi
